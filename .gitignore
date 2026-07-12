@@ -103,3 +103,6 @@ backups/
 *.backup
 
 Dist/
+
+# Local release archives
+Archive/

@@ -1,7 +1,8 @@
 {
   "product": "BursaAI",
-  "version": "7.0.0-rc1",
+  "version": "7.0.0-rc4",
   "sprint": "7A.5",
-  "release": "RC1",
-  "component": "AI Ranking Core"
+  "release": "RC4",
+  "component": "Pareto Ranking + Confidence Engine + Tier Gate",
+  "recommended_branch": "feature/7a5-rc4-pareto-confidence"
 }

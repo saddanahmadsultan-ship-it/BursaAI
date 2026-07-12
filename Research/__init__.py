@@ -1,7 +1,7 @@
 """
 BursaAI AI Research Engine
 Version : 7.0
-Sprint  : 7A.5 RC1
+Sprint  : 7A.5 RC2
 """
 
 from Research.candidate import Candidate
@@ -27,6 +27,9 @@ from Research.ranking_engine import AIRankingEngine
 from Research.ranking_models import RankingBreakdown, RankedStrategy
 from Research.result import ResearchResult
 from Research.result_store import ResearchResultStore
+from Research.robustness_config import RobustnessWeights
+from Research.robustness_engine import RobustnessEngine
+from Research.robustness_models import RobustnessBreakdown
 from Research.walk_forward_adapter import (
     WalkForwardAdapter,
     WalkForwardAdapterConfig,
@@ -50,6 +53,9 @@ __all__ = [
     "RankingWeights",
     "ResearchResult",
     "ResearchResultStore",
+    "RobustnessBreakdown",
+    "RobustnessEngine",
+    "RobustnessWeights",
     "RunnerConfig",
     "RunnerStats",
     "SearchMethod",
@@ -57,5 +63,5 @@ __all__ = [
     "WalkForwardAdapterConfig",
 ]
 
-__version__ = "7.0.0-rc1"
-__sprint__ = "7A.5-RC1"
+__version__ = "7.0.0-rc2"
+__sprint__ = "7A.5-RC2"

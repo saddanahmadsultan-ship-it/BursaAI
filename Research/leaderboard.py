@@ -30,7 +30,6 @@ class LeaderboardExporter:
         ranked: List[RankedStrategy],
     ) -> Path:
         path = self.output_dir / "leaderboard.json"
-
         path.write_text(
             json.dumps(
                 [item.to_dict() for item in ranked],
@@ -40,7 +39,6 @@ class LeaderboardExporter:
             ),
             encoding="utf-8",
         )
-
         return path
 
     def export_csv(
@@ -59,6 +57,11 @@ class LeaderboardExporter:
             "consistency_score",
             "robustness_score",
             "confidence_score",
+            "fold_success_score",
+            "degradation_score",
+            "fold_dispersion_score",
+            "parameter_stability_score",
+            "regime_stability_score",
             "tier",
             "recommendation",
             "cagr",
@@ -74,6 +77,7 @@ class LeaderboardExporter:
 
             for item in ranked:
                 metrics = item.metrics
+                robustness = item.robustness_breakdown
 
                 writer.writerow(
                     {
@@ -86,6 +90,26 @@ class LeaderboardExporter:
                         "consistency_score": item.breakdown.consistency_score,
                         "robustness_score": item.breakdown.robustness_score,
                         "confidence_score": item.breakdown.confidence_score,
+                        "fold_success_score": (
+                            robustness.fold_success_score
+                            if robustness else 0.0
+                        ),
+                        "degradation_score": (
+                            robustness.degradation_score
+                            if robustness else 0.0
+                        ),
+                        "fold_dispersion_score": (
+                            robustness.fold_dispersion_score
+                            if robustness else 0.0
+                        ),
+                        "parameter_stability_score": (
+                            robustness.parameter_stability_score
+                            if robustness else 0.0
+                        ),
+                        "regime_stability_score": (
+                            robustness.regime_stability_score
+                            if robustness else 0.0
+                        ),
                         "tier": item.tier,
                         "recommendation": item.recommendation,
                         "cagr": metrics.get("cagr", 0.0),
@@ -121,6 +145,17 @@ class LeaderboardExporter:
                 round(
                     sum(
                         item.breakdown.overall_score
+                        for item in ranked
+                    ) / len(ranked),
+                    4,
+                )
+                if ranked
+                else 0.0
+            ),
+            "average_robustness_score": (
+                round(
+                    sum(
+                        item.breakdown.robustness_score
                         for item in ranked
                     ) / len(ranked),
                     4,

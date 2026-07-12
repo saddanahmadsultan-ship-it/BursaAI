@@ -6,14 +6,7 @@ from datetime import date, timedelta
 from Research.candidate import Candidate
 
 
-def deterministic_mock_walk_forward(
-    candidate: Candidate,
-):
-    """
-    Mock Walk Forward untuk validasi integrasi sahaja.
-    Bukan backtest sebenar.
-    """
-
+def deterministic_mock_walk_forward(candidate: Candidate):
     digest = hashlib.sha256(
         candidate.candidate_hash.encode("utf-8")
     ).hexdigest()
@@ -38,23 +31,25 @@ def deterministic_mock_walk_forward(
     folds = []
 
     for fold_number in range(1, 6):
+        train_return = round(
+            cagr * (0.8 + fold_number * 0.03),
+            2,
+        )
+        test_return = round(
+            cagr * (0.55 + fold_number * 0.025),
+            2,
+        )
+        test_sharpe = round(
+            sharpe * (0.75 + fold_number * 0.04),
+            2,
+        )
+
         folds.append(
             {
                 "fold": fold_number,
-                "train_return": round(
-                    cagr * (0.8 + fold_number * 0.03),
-                    2,
-                ),
-                "test_return": round(
-                    cagr * (0.55 + fold_number * 0.025),
-                    2,
-                ),
-                "test_sharpe": round(
-                    sharpe * (
-                        0.75 + fold_number * 0.04
-                    ),
-                    2,
-                ),
+                "train_return": train_return,
+                "test_return": test_return,
+                "test_sharpe": test_sharpe,
             }
         )
 
@@ -63,33 +58,41 @@ def deterministic_mock_walk_forward(
     start = date(2024, 1, 1)
 
     for index in range(24):
-        value *= (
-            1.0
-            + (
-                cagr / 100.0
-            ) / 24.0
-        )
-
+        value *= 1.0 + (cagr / 100.0) / 24.0
         equity_curve.append(
             {
                 "date": (
-                    start
-                    + timedelta(days=index * 30)
+                    start + timedelta(days=index * 30)
                 ).isoformat(),
                 "equity": round(value, 2),
             }
         )
 
+    regime_returns = {
+        "BULL": round(cagr * 1.15, 2),
+        "SIDEWAYS": round(cagr * 0.55, 2),
+        "BEAR": round(cagr * 0.20, 2),
+        "HIGH_VOL": round(cagr * 0.40, 2),
+    }
+
     return {
         "metrics": {
             "cagr": cagr,
             "sharpe_ratio": sharpe,
+            "sortino_ratio": sharpe * 1.25,
             "max_drawdown": max_dd,
+            "volatility": 12 + seed % 15,
+            "exposure": 45 + seed % 30,
             "win_rate": win_rate,
             "profit_factor": profit_factor,
+            "recovery_factor": max(
+                0.1,
+                cagr / max(max_dd, 0.1),
+            ),
             "total_trades": 40 + seed % 120,
             "consistency_score": 70 + seed % 25,
             "robustness_score": 68 + seed % 27,
+            "risk_score": 65 + seed % 25,
             "final_score": final_score,
         },
         "folds": folds,
@@ -111,5 +114,6 @@ def deterministic_mock_walk_forward(
         "diagnostics": {
             "engine": "deterministic_mock",
             "fold_count": len(folds),
+            "regime_returns": regime_returns,
         },
     }

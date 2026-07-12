@@ -6,31 +6,41 @@ from Research.candidate import Candidate
 from Research.ranking_config import RankingWeights
 from Research.ranking_models import RankingBreakdown, RankedStrategy
 from Research.result import ResearchResult
+from Research.robustness_engine import RobustnessEngine
 from Research.scoring import clamp, mean, normalize_inverse, normalize_positive
 
 
 class AIRankingEngine:
-    """
-    AI Ranking Core RC1.
-
-    Fokus RC1:
-    - weighted multi-factor score
-    - tier classification
-    - recommendation
-    - deterministic leaderboard
-    """
-
-    def __init__(self, weights: Optional[RankingWeights] = None) -> None:
+    def __init__(
+        self,
+        weights: Optional[RankingWeights] = None,
+        robustness_engine: Optional[RobustnessEngine] = None,
+    ) -> None:
         self.weights = weights or RankingWeights()
+        self.robustness_engine = robustness_engine or RobustnessEngine()
 
     def rank(
         self,
         items: Iterable[Tuple[Candidate, ResearchResult]],
     ) -> List[RankedStrategy]:
+        pairs = list(items)
+        peers = [candidate for candidate, _ in pairs]
         ranked: List[RankedStrategy] = []
 
-        for candidate, result in items:
-            breakdown = self.score(candidate, result)
+        for candidate, result in pairs:
+            robustness_breakdown = self.robustness_engine.evaluate(
+                candidate,
+                result,
+                peer_candidates=peers,
+            )
+
+            breakdown = self.score(
+                candidate,
+                result,
+                robustness_score=(
+                    robustness_breakdown.overall_robustness_score
+                ),
+            )
 
             ranked.append(
                 RankedStrategy(
@@ -43,10 +53,15 @@ class AIRankingEngine:
                     candidate_name=candidate.name,
                     parameters=dict(candidate.parameters),
                     breakdown=breakdown,
-                    tier=self.classify_tier(breakdown.overall_score),
-                    recommendation=self.recommendation(breakdown.overall_score),
+                    tier=self.classify_tier(
+                        breakdown.overall_score
+                    ),
+                    recommendation=self.recommendation(
+                        breakdown.overall_score
+                    ),
                     metrics=result.metrics.to_dict(),
                     tags=list(candidate.tags),
+                    robustness_breakdown=robustness_breakdown,
                 )
             )
 
@@ -69,6 +84,7 @@ class AIRankingEngine:
         self,
         candidate: Candidate,
         result: ResearchResult,
+        robustness_score: Optional[float] = None,
     ) -> RankingBreakdown:
         metrics = result.metrics
 
@@ -91,8 +107,15 @@ class AIRankingEngine:
             ]
         )
 
-        consistency_score = clamp(metrics.consistency_score)
-        robustness_score = clamp(metrics.robustness_score)
+        consistency_score = clamp(
+            metrics.consistency_score
+        )
+
+        resolved_robustness = clamp(
+            robustness_score
+            if robustness_score is not None
+            else metrics.robustness_score
+        )
 
         confidence_score = self._confidence_score(result)
 
@@ -100,7 +123,7 @@ class AIRankingEngine:
             performance_score * self.weights.performance
             + risk_score * self.weights.risk
             + consistency_score * self.weights.consistency
-            + robustness_score * self.weights.robustness
+            + resolved_robustness * self.weights.robustness
             + confidence_score * self.weights.confidence
         )
 
@@ -108,7 +131,7 @@ class AIRankingEngine:
             performance_score=round(performance_score, 4),
             risk_score=round(risk_score, 4),
             consistency_score=round(consistency_score, 4),
-            robustness_score=round(robustness_score, 4),
+            robustness_score=round(resolved_robustness, 4),
             confidence_score=round(confidence_score, 4),
             overall_score=round(clamp(overall_score), 4),
         )
@@ -120,7 +143,6 @@ class AIRankingEngine:
 
         fold_score = normalize_positive(fold_count, 8.0)
         trade_score = normalize_positive(trade_count, 120.0)
-
         diagnostics_bonus = 100.0 if result.diagnostics else 50.0
         equity_bonus = 100.0 if result.equity_curve else 40.0
 
@@ -135,8 +157,6 @@ class AIRankingEngine:
 
     @staticmethod
     def classify_tier(score: float) -> str:
-        score = float(score)
-
         if score >= 90:
             return "RESEARCH_GOLD"
         if score >= 80:
@@ -149,8 +169,6 @@ class AIRankingEngine:
 
     @staticmethod
     def recommendation(score: float) -> str:
-        tier = AIRankingEngine.classify_tier(score)
-
         mapping: Dict[str, str] = {
             "RESEARCH_GOLD": "PRIORITY_VALIDATION",
             "RESEARCH_SILVER": "ADVANCE_TO_STRESS_TEST",
@@ -159,4 +177,4 @@ class AIRankingEngine:
             "REJECT": "DO_NOT_ADVANCE",
         }
 
-        return mapping[tier]
+        return mapping[AIRankingEngine.classify_tier(score)]

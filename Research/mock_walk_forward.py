@@ -35,10 +35,12 @@ def deterministic_mock_walk_forward(candidate: Candidate):
             cagr * (0.8 + fold_number * 0.03),
             2,
         )
+
         test_return = round(
             cagr * (0.55 + fold_number * 0.025),
             2,
         )
+
         test_sharpe = round(
             sharpe * (0.75 + fold_number * 0.04),
             2,
@@ -58,7 +60,13 @@ def deterministic_mock_walk_forward(candidate: Candidate):
     start = date(2024, 1, 1)
 
     for index in range(24):
-        value *= 1.0 + (cagr / 100.0) / 24.0
+        periodic_return = (
+            (cagr / 100.0) / 24.0
+            + (((seed >> (index % 16)) & 3) - 1) * 0.0004
+        )
+
+        value *= 1.0 + periodic_return
+
         equity_curve.append(
             {
                 "date": (
@@ -67,6 +75,24 @@ def deterministic_mock_walk_forward(candidate: Candidate):
                 "equity": round(value, 2),
             }
         )
+
+    monthly_returns = {}
+
+    for month in range(1, 13):
+        value_month = (
+            cagr / 12.0
+            + (((seed >> (month % 12)) & 3) - 1) * 0.18
+        )
+
+        monthly_returns[
+            f"2024-{month:02d}"
+        ] = round(value_month, 2)
+
+    yearly_returns = {
+        "2023": round(cagr * 0.75, 2),
+        "2024": round(cagr * 0.90, 2),
+        "2025": round(cagr * 1.05, 2),
+    }
 
     regime_returns = {
         "BULL": round(cagr * 1.15, 2),
@@ -96,15 +122,8 @@ def deterministic_mock_walk_forward(candidate: Candidate):
             "final_score": final_score,
         },
         "folds": folds,
-        "monthly_returns": {
-            "2024-01": 1.2,
-            "2024-02": 0.8,
-            "2024-03": 1.5,
-        },
-        "yearly_returns": {
-            "2024": round(cagr * 0.85, 2),
-            "2025": round(cagr * 1.05, 2),
-        },
+        "monthly_returns": monthly_returns,
+        "yearly_returns": yearly_returns,
         "equity_curve": equity_curve,
         "trade_summary": {
             "average_holding_days": 12,

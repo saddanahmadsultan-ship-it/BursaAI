@@ -30,6 +30,7 @@ class LeaderboardExporter:
         ranked: List[RankedStrategy],
     ) -> Path:
         path = self.output_dir / "leaderboard.json"
+
         path.write_text(
             json.dumps(
                 [item.to_dict() for item in ranked],
@@ -39,6 +40,7 @@ class LeaderboardExporter:
             ),
             encoding="utf-8",
         )
+
         return path
 
     def export_csv(
@@ -57,6 +59,11 @@ class LeaderboardExporter:
             "consistency_score",
             "robustness_score",
             "confidence_score",
+            "fold_consistency_score",
+            "monthly_stability_score",
+            "yearly_stability_score",
+            "equity_smoothness_score",
+            "return_reliability_score",
             "fold_success_score",
             "degradation_score",
             "fold_dispersion_score",
@@ -78,6 +85,7 @@ class LeaderboardExporter:
             for item in ranked:
                 metrics = item.metrics
                 robustness = item.robustness_breakdown
+                consistency = item.consistency_breakdown
 
                 writer.writerow(
                     {
@@ -90,6 +98,26 @@ class LeaderboardExporter:
                         "consistency_score": item.breakdown.consistency_score,
                         "robustness_score": item.breakdown.robustness_score,
                         "confidence_score": item.breakdown.confidence_score,
+                        "fold_consistency_score": (
+                            consistency.fold_consistency_score
+                            if consistency else 0.0
+                        ),
+                        "monthly_stability_score": (
+                            consistency.monthly_stability_score
+                            if consistency else 0.0
+                        ),
+                        "yearly_stability_score": (
+                            consistency.yearly_stability_score
+                            if consistency else 0.0
+                        ),
+                        "equity_smoothness_score": (
+                            consistency.equity_smoothness_score
+                            if consistency else 0.0
+                        ),
+                        "return_reliability_score": (
+                            consistency.return_reliability_score
+                            if consistency else 0.0
+                        ),
                         "fold_success_score": (
                             robustness.fold_success_score
                             if robustness else 0.0
@@ -156,6 +184,17 @@ class LeaderboardExporter:
                 round(
                     sum(
                         item.breakdown.robustness_score
+                        for item in ranked
+                    ) / len(ranked),
+                    4,
+                )
+                if ranked
+                else 0.0
+            ),
+            "average_consistency_score": (
+                round(
+                    sum(
+                        item.breakdown.consistency_score
                         for item in ranked
                     ) / len(ranked),
                     4,

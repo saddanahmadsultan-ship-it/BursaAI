@@ -1,10 +1,13 @@
 """
 BursaAI AI Research Engine
 Version : 7.0
-Sprint  : 7A.5 RC2
+Sprint  : 7A.5 RC3
 """
 
 from Research.candidate import Candidate
+from Research.consistency_config import ConsistencyWeights
+from Research.consistency_engine import ConsistencyEngine
+from Research.consistency_models import ConsistencyBreakdown
 from Research.enums import (
     CandidateStatus,
     ExperimentMode,
@@ -39,6 +42,9 @@ __all__ = [
     "AIRankingEngine",
     "Candidate",
     "CandidateStatus",
+    "ConsistencyBreakdown",
+    "ConsistencyEngine",
+    "ConsistencyWeights",
     "Experiment",
     "ExperimentMode",
     "ExperimentRegistry",
@@ -63,5 +69,5 @@ __all__ = [
     "WalkForwardAdapterConfig",
 ]
 
-__version__ = "7.0.0-rc2"
-__sprint__ = "7A.5-RC2"
+__version__ = "7.0.0-rc3"
+__sprint__ = "7A.5-RC3"

@@ -1,42 +1,45 @@
-BursaAI v7 Sprint 7A.5 RC2 Release Pack
-Robustness Engine
+BursaAI v7 Sprint 7A.5 RC3 Release Pack
+Consistency Engine
 
 INSTALL
 
-1. Backup BursaAI.
-2. Extract ZIP.
-3. Copy semua kandungan ke root BursaAI.
-4. Pilih Replace/Merge.
-5. Jalankan:
+1. Pastikan RC2 sudah digabungkan ke develop.
+2. Jalankan:
 
-   python -m unittest Tests.test_sprint7a5_rc2 -v
-   python main_v7_robustness.py
+   git switch develop
+   git pull
+   git switch -c feature/7a5-rc3-consistency
 
-GIT WORKFLOW
+3. Extract ZIP.
+4. Copy semua kandungan ke root BursaAI.
+5. Pilih Replace/Merge.
+6. Jalankan:
 
-git switch develop
-git switch -c feature/7a5-rc2-robustness
+   python -m unittest Tests.test_sprint7a5_rc3 -v
+   python main_v7_consistency.py
 
-Selepas copy dan test:
+SELEPAS LULUS
 
 git add .
-git commit -m "feat(research): add Sprint 7A.5 RC2 robustness engine"
-git push -u origin feature/7a5-rc2-robustness
+git commit -m "feat(research): add Sprint 7A.5 RC3 consistency engine"
+git push -u origin feature/7a5-rc3-consistency
 
-RC2 FEATURES
+RC3 FEATURES
 
-- Walk Forward fold success score
-- Train-test degradation score
-- Fold dispersion score
-- Parameter stability score
-- Regime stability score
-- Overall robustness score
+- Walk Forward fold consistency
+- Monthly return stability
+- Yearly return stability
+- Equity curve smoothness
+- Return reliability score
+- Overall consistency score
 - AI Ranking Engine integration
-- Leaderboard robustness columns
-- CSV and JSON robustness export
-- RC2 unit test suite
+- Leaderboard consistency columns
+- CSV and JSON export
+- RC3 unit test suite
 
-LIMITATION
+OUTPUT
 
-Parameter stability RC2 menggunakan jarak parameter antara candidate.
-Neighborhood performance surface analysis akan dipertingkatkan dalam RC berikutnya.
+Reports/Ranking/
+  leaderboard.csv
+  leaderboard.json
+  summary.json

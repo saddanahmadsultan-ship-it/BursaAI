@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Dict, Iterable, List, Optional, Tuple
 
 from Research.candidate import Candidate
+from Research.consistency_engine import ConsistencyEngine
 from Research.ranking_config import RankingWeights
 from Research.ranking_models import RankingBreakdown, RankedStrategy
 from Research.result import ResearchResult
@@ -15,9 +16,11 @@ class AIRankingEngine:
         self,
         weights: Optional[RankingWeights] = None,
         robustness_engine: Optional[RobustnessEngine] = None,
+        consistency_engine: Optional[ConsistencyEngine] = None,
     ) -> None:
         self.weights = weights or RankingWeights()
         self.robustness_engine = robustness_engine or RobustnessEngine()
+        self.consistency_engine = consistency_engine or ConsistencyEngine()
 
     def rank(
         self,
@@ -34,11 +37,18 @@ class AIRankingEngine:
                 peer_candidates=peers,
             )
 
+            consistency_breakdown = self.consistency_engine.evaluate(
+                result
+            )
+
             breakdown = self.score(
                 candidate,
                 result,
                 robustness_score=(
                     robustness_breakdown.overall_robustness_score
+                ),
+                consistency_score=(
+                    consistency_breakdown.overall_consistency_score
                 ),
             )
 
@@ -62,6 +72,7 @@ class AIRankingEngine:
                     metrics=result.metrics.to_dict(),
                     tags=list(candidate.tags),
                     robustness_breakdown=robustness_breakdown,
+                    consistency_breakdown=consistency_breakdown,
                 )
             )
 
@@ -85,6 +96,7 @@ class AIRankingEngine:
         candidate: Candidate,
         result: ResearchResult,
         robustness_score: Optional[float] = None,
+        consistency_score: Optional[float] = None,
     ) -> RankingBreakdown:
         metrics = result.metrics
 
@@ -107,8 +119,10 @@ class AIRankingEngine:
             ]
         )
 
-        consistency_score = clamp(
-            metrics.consistency_score
+        resolved_consistency = clamp(
+            consistency_score
+            if consistency_score is not None
+            else metrics.consistency_score
         )
 
         resolved_robustness = clamp(
@@ -122,7 +136,7 @@ class AIRankingEngine:
         overall_score = (
             performance_score * self.weights.performance
             + risk_score * self.weights.risk
-            + consistency_score * self.weights.consistency
+            + resolved_consistency * self.weights.consistency
             + resolved_robustness * self.weights.robustness
             + confidence_score * self.weights.confidence
         )
@@ -130,7 +144,7 @@ class AIRankingEngine:
         return RankingBreakdown(
             performance_score=round(performance_score, 4),
             risk_score=round(risk_score, 4),
-            consistency_score=round(consistency_score, 4),
+            consistency_score=round(resolved_consistency, 4),
             robustness_score=round(resolved_robustness, 4),
             confidence_score=round(confidence_score, 4),
             overall_score=round(clamp(overall_score), 4),

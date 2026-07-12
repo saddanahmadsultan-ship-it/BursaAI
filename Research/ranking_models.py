@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Optional
 
+from Research.consistency_models import ConsistencyBreakdown
 from Research.robustness_models import RobustnessBreakdown
 
 
@@ -35,6 +36,7 @@ class RankedStrategy:
     metrics: Dict[str, Any] = field(default_factory=dict)
     tags: List[str] = field(default_factory=list)
     robustness_breakdown: Optional[RobustnessBreakdown] = None
+    consistency_breakdown: Optional[ConsistencyBreakdown] = None
 
     def to_dict(self) -> Dict[str, Any]:
         data = asdict(self)
@@ -43,6 +45,11 @@ class RankedStrategy:
         if self.robustness_breakdown is not None:
             data["robustness_breakdown"] = (
                 self.robustness_breakdown.to_dict()
+            )
+
+        if self.consistency_breakdown is not None:
+            data["consistency_breakdown"] = (
+                self.consistency_breakdown.to_dict()
             )
 
         return data

@@ -1,0 +1,58 @@
+name: BursaAI CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - "release/**"
+      - "feature/**"
+      - "fix/**"
+  pull_request:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.11"
+          - "3.12"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          fi
+
+      - name: Compile Python sources
+        run: python -m compileall -q .
+
+      - name: Security and repository check
+        run: python Tools/pre_commit_security_check.py --ci
+
+      - name: Run unit tests
+        run: python -m unittest discover -s Tests -p "test_*.py" -v

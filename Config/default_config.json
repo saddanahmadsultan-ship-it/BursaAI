@@ -1,0 +1,45 @@
+{
+  "app_name": "BursaAI",
+  "version": "6.0",
+  "environment": "development",
+  "features": {
+    "enable_analysis": true,
+    "enable_portfolio": true,
+    "enable_paper_trading": true,
+    "enable_notifications": true,
+    "enable_journal": true,
+    "enable_analytics": true,
+    "enable_walkforward": false
+  },
+  "execution": {
+    "mode": "analysis",
+    "failure_mode": "stop",
+    "echo_logs": true,
+    "symbols": [
+      "1155.KL",
+      "1023.KL"
+    ],
+    "pipeline_version": "6.0"
+  },
+  "paper_trading": {
+    "starting_capital": 100000,
+    "slippage_percent": 0.0,
+    "commission_flat": 0.0
+  },
+  "notifications": {
+    "telegram_enabled": false,
+    "telegram_dry_run": true
+  },
+  "walkforward": {
+    "symbol": "1155.KL",
+    "strategy_name": "ema_cross",
+    "optimization_mode": "grid",
+    "random_count": 10,
+    "export_report": true,
+    "output_directory": "Reports/WalkForward"
+  },
+  "journal_database_path": "Data/bursaai_journal.db",
+  "metadata": {
+    "release": "Sprint 6G.3"
+  }
+}

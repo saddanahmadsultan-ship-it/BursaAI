@@ -1,0 +1,33 @@
+name: Bug report
+description: Laporkan ralat BursaAI
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Masalah
+      description: Terangkan masalah dengan jelas.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Cara menghasilkan semula
+      description: Sertakan arahan dan output terminal.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versi BursaAI
+      placeholder: 7.0.0-rc1
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Persekitaran
+      placeholder: Windows 11, Python 3.12

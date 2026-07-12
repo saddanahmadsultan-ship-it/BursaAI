@@ -1,0 +1,12 @@
+{
+  "product": "BursaAI",
+  "pack": "Git Migration Release Pack",
+  "version": "1.0.0",
+  "default_remote": "GitHub",
+  "default_visibility": "private",
+  "branches": [
+    "main",
+    "develop",
+    "release/7.0"
+  ]
+}

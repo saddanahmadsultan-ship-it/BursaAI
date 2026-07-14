@@ -1,7 +1,8 @@
 {
   "product": "BursaAI",
-  "version": "7.0.0-rc1",
+  "version": "7.0.0-final-rc",
   "sprint": "7A.5",
-  "release": "RC1",
-  "component": "AI Ranking Core"
+  "release": "Final RC",
+  "component": "Unified AI Research Pipeline",
+  "recommended_branch": "release/7a5-final-rc"
 }

@@ -1,0 +1,90 @@
+{
+  "average_consistency_score": 94.8821,
+  "average_overall_score": 74.3708,
+  "average_robustness_score": 87.7872,
+  "tier_counts": {
+    "CANDIDATE": 9,
+    "EXPERIMENTAL": 1,
+    "RESEARCH_SILVER": 2
+  },
+  "top_candidate": {
+    "breakdown": {
+      "confidence_score": 85.9024,
+      "consistency_score": 94.8941,
+      "overall_score": 80.5989,
+      "performance_score": 75.1034,
+      "risk_score": 67.3,
+      "robustness_score": 87.8936
+    },
+    "candidate_hash": "8b07588ad7cdf469a884cf20c3eb0cc693153de28a6f60532b33add341866184",
+    "candidate_id": "CAN-FE6D35640A19",
+    "candidate_name": "EMA_RSI_ATR_00002",
+    "confidence_breakdown": {
+      "data_coverage_score": 59.7917,
+      "fold_quality_score": 88.1798,
+      "out_of_sample_quality_score": 85.3822,
+      "overall_confidence_score": 85.9024,
+      "regime_coverage_score": 100.0,
+      "stability_alignment_score": 91.3939,
+      "trade_sample_score": 90.6667
+    },
+    "consistency_breakdown": {
+      "equity_smoothness_score": 98.088,
+      "fold_consistency_score": 96.0402,
+      "monthly_stability_score": 95.506,
+      "overall_consistency_score": 94.8941,
+      "return_reliability_score": 89.91,
+      "yearly_stability_score": 94.5549
+    },
+    "experiment_id": "EXP-EECBAB663BFC",
+    "metrics": {
+      "average_holding_days": 0.0,
+      "average_loss": 0.0,
+      "average_win": 0.0,
+      "cagr": 22.16,
+      "calmar_ratio": 0.0,
+      "consistency_score": 86.0,
+      "expectancy": 0.0,
+      "exposure": 51.0,
+      "final_score": 92.2195,
+      "largest_loss": 0.0,
+      "largest_win": 0.0,
+      "losing_trades": 0,
+      "max_drawdown": 7.28,
+      "payoff_ratio": 0.0,
+      "profit_factor": 1.8,
+      "recovery_factor": 3.043956043956044,
+      "risk_score": 81.0,
+      "robustness_score": 89.0,
+      "sharpe_ratio": 1.7599999999999998,
+      "sortino_ratio": 2.1999999999999997,
+      "stability_score": 0,
+      "total_return": 0.0,
+      "total_trades": 136,
+      "volatility": 18.0,
+      "win_rate": 49.55,
+      "winning_trades": 0
+    },
+    "parameters": {
+      "atr_multiplier": 1.5,
+      "ema_fast": 10,
+      "ema_slow": 50,
+      "rsi_period": 10
+    },
+    "rank": 1,
+    "recommendation": "ADVANCE_TO_STRESS_TEST",
+    "result_id": "RES-C59AC2CEBE6F",
+    "robustness_breakdown": {
+      "degradation_score": 70.1963,
+      "fold_dispersion_score": 94.3431,
+      "fold_success_score": 100.0,
+      "overall_robustness_score": 87.8936,
+      "parameter_stability_score": 95.0,
+      "regime_stability_score": 81.5063
+    },
+    "strategy_name": "EMA_RSI_ATR",
+    "tags": [],
+    "tier": "RESEARCH_SILVER"
+  },
+  "total_ranked": 12
+}

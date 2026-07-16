@@ -1,0 +1,40 @@
+{
+  "experiments": {
+    "EXP-B2DC4B15CFF9": {
+      "checkpoint_file": "checkpoints/EXP-B2DC4B15CFF9.checkpoint.json",
+      "completed_at": "2026-07-12T04:10:28.593045+00:00",
+      "completed_candidates": 12,
+      "created_at": "2026-07-12T04:10:28.271566+00:00",
+      "experiment_id": "EXP-B2DC4B15CFF9",
+      "failed_candidates": 0,
+      "mode": "PARALLEL",
+      "name": "Sprint 7A.5 RC4 Pareto Demo",
+      "progress_percentage": 100.0,
+      "record_file": "records/EXP-B2DC4B15CFF9.json",
+      "search_method": "GRID",
+      "started_at": "2026-07-12T04:10:28.287499+00:00",
+      "status": "COMPLETED",
+      "total_candidates": 12,
+      "updated_at": "2026-07-12T04:10:28.593053+00:00"
+    },
+    "EXP-EECBAB663BFC": {
+      "checkpoint_file": "checkpoints/EXP-EECBAB663BFC.checkpoint.json",
+      "completed_at": "2026-07-14T20:58:33.331802+00:00",
+      "completed_candidates": 12,
+      "created_at": "2026-07-14T20:58:32.941573+00:00",
+      "experiment_id": "EXP-EECBAB663BFC",
+      "failed_candidates": 0,
+      "mode": "PARALLEL",
+      "name": "Sprint 7A.5 Final RC Validation",
+      "progress_percentage": 100.0,
+      "record_file": "records/EXP-EECBAB663BFC.json",
+      "search_method": "GRID",
+      "started_at": "2026-07-14T20:58:32.959478+00:00",
+      "status": "COMPLETED",
+      "total_candidates": 12,
+      "updated_at": "2026-07-14T20:58:33.331811+00:00"
+    }
+  },
+  "schema_version": 1,
+  "updated_at": "2026-07-14T20:58:33.345953+00:00"
+}

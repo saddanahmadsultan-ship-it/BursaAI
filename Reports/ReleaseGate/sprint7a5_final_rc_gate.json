@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "message": "Missing=[]",
+      "name": "required_files",
+      "passed": true
+    },
+    {
+      "message": "Status=COMPLETED",
+      "name": "experiment_completed",
+      "passed": true
+    },
+    {
+      "message": "Failed candidates=0",
+      "name": "zero_failed_candidates",
+      "passed": true
+    },
+    {
+      "message": "Completed=12/12",
+      "name": "all_candidates_completed",
+      "passed": true
+    },
+    {
+      "message": "Entries=12",
+      "name": "leaderboard_generated",
+      "passed": true
+    },
+    {
+      "message": "Points=12",
+      "name": "pareto_generated",
+      "passed": true
+    },
+    {
+      "message": "Decisions=12",
+      "name": "promotion_decisions_generated",
+      "passed": true
+    },
+    {
+      "message": "Missing=[]",
+      "name": "reports_written",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "release": "Sprint 7A.5 Final RC"
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "candidate_id": "CAN-F950D44729A6",
+    "crowding_distance": Infinity,
+    "dominates_count": 4,
+    "domination_count": 0,
+    "front": 1,
+    "objectives": {
+      "confidence_score": 85.3222,
+      "consistency_score": 95.3132,
+      "performance_score": 62.8815,
+      "risk_score": 72.9048,
+      "robustness_score": 87.8958
+    },
+    "result_id": "RES-99D54733786A"
+  },
+  {
+    "candidate_id": "CAN-FE6D35640A19",
+    "crowding_distance": Infinity,
+    "dominates_count": 2,
+    "domination_count": 0,
+    "front": 1,
+    "objectives": {
+      "confidence_score": 85.9024,
+      "consistency_score": 94.8941,
+      "performance_score": 75.1034,
+      "risk_score": 67.3,
+      "robustness_score": 87.8936
+    },
+    "result_id": "RES-C59AC2CEBE6F"
+  },
+  {
+    "candidate_id": "CAN-48F1E986DA82",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 0,
+    "front": 1,
+    "objectives": {
+      "confidence_score": 75.6827,
+      "consistency_score": 95.7299,
+      "performance_score": 57.7755,
+      "risk_score": 70.7508,
+      "robustness_score": 87.8908
+    },
+    "result_id": "RES-97DDC42A8643"
+  },
+  {
+    "candidate_id": "CAN-D68A7B8E644D",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 0,
+    "front": 1,
+    "objectives": {
+      "confidence_score": 86.5897,
+      "consistency_score": 94.1363,
+      "performance_score": 65.8141,
+      "risk_score": 47.5754,
+      "robustness_score": 87.8894
+    },
+    "result_id": "RES-020201BC3FCA"
+  },
+  {
+    "candidate_id": "CAN-CC594A9D71D4",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 0,
+    "front": 1,
+    "objectives": {
+      "confidence_score": 85.9622,
+      "consistency_score": 95.1545,
+      "performance_score": 57.6976,
+      "risk_score": 57.5571,
+      "robustness_score": 87.5722
+    },
+    "result_id": "RES-78FD95B78A5F"
+  },
+  {
+    "candidate_id": "CAN-6A63BF9D9EEF",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 0,
+    "front": 1,
+    "objectives": {
+      "confidence_score": 87.6232,
+      "consistency_score": 95.0434,
+      "performance_score": 49.4776,
+      "risk_score": 58.6437,
+      "robustness_score": 87.8976
+    },
+    "result_id": "RES-A2CE11A31238"
+  },
+  {
+    "candidate_id": "CAN-9A178C11171D",
+    "crowding_distance": 1.2338967567731662,
+    "dominates_count": 2,
+    "domination_count": 0,
+    "front": 1,
+    "objectives": {
+      "confidence_score": 85.7607,
+      "consistency_score": 94.8748,
+      "performance_score": 74.8295,
+      "risk_score": 66.8413,
+      "robustness_score": 87.896
+    },
+    "result_id": "RES-67CAA6770F23"
+  },
+  {
+    "candidate_id": "CAN-C224C994D400",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 2,
+    "front": 2,
+    "objectives": {
+      "confidence_score": 81.2417,
+      "consistency_score": 94.7995,
+      "performance_score": 70.3842,
+      "risk_score": 59.9492,
+      "robustness_score": 87.5751
+    },
+    "result_id": "RES-2AE791724408"
+  },
+  {
+    "candidate_id": "CAN-7104CB15069E",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 1,
+    "front": 2,
+    "objectives": {
+      "confidence_score": 76.8148,
+      "consistency_score": 93.6201,
+      "performance_score": 61.0665,
+      "risk_score": 69.4206,
+      "robustness_score": 87.8936
+    },
+    "result_id": "RES-C1136E02D0A8"
+  },
+  {
+    "candidate_id": "CAN-ACEB60B41227",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 1,
+    "front": 2,
+    "objectives": {
+      "confidence_score": 83.5638,
+      "consistency_score": 95.2661,
+      "performance_score": 53.9528,
+      "risk_score": 55.2984,
+      "robustness_score": 87.5744
+    },
+    "result_id": "RES-43D4713FE54B"
+  },
+  {
+    "candidate_id": "CAN-985327594C29",
+    "crowding_distance": Infinity,
+    "dominates_count": 0,
+    "domination_count": 1,
+    "front": 2,
+    "objectives": {
+      "confidence_score": 77.4236,
+      "consistency_score": 95.2498,
+      "performance_score": 43.9813,
+      "risk_score": 66.981,
+      "robustness_score": 87.8914
+    },
+    "result_id": "RES-01FB3155C8DF"
+  },
+  {
+    "candidate_id": "CAN-E0B9BA4935C6",
+    "crowding_distance": 3.148760051517117,
+    "dominates_count": 0,
+    "domination_count": 3,
+    "front": 2,
+    "objectives": {
+      "confidence_score": 78.8966,
+      "consistency_score": 94.5039,
+      "performance_score": 51.5267,
+      "risk_score": 61.4381,
+      "robustness_score": 87.5764
+    },
+    "result_id": "RES-E285AAB945F4"
+  }
+]

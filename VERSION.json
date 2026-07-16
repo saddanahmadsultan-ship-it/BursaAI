@@ -1,8 +1,7 @@
 {
   "product": "BursaAI",
-  "version": "7.0.0-final-rc",
-  "sprint": "7A.5",
-  "release": "Final RC",
-  "component": "Unified AI Research Pipeline",
-  "recommended_branch": "release/7a5-final-rc"
+  "version": "7.1.0-rc1",
+  "sprint": "7B.1",
+  "release": "Machine Learning Foundations",
+  "recommended_branch": "feature/7b1-ml-foundations"
 }

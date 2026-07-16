@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "path": "Research/unified_pipeline.py",
+      "sha256": "f98f4e862bcf19e84f01425833f08854c4135c218e3f4f0bd1bd7cf11045b11e",
+      "size_bytes": 4424
+    },
+    {
+      "path": "Research/ranking_engine.py",
+      "sha256": "d9e6d31dd9771c90c6c026875d5597f096418b8e1e9d49638dedea9177508fd6",
+      "size_bytes": 6788
+    },
+    {
+      "path": "Research/robustness_engine.py",
+      "sha256": "8a444f4946083ea9bc619e1cd989825a809366d43ff29e9c6d4d7bfa1807dc35",
+      "size_bytes": 6450
+    },
+    {
+      "path": "Research/consistency_engine.py",
+      "sha256": "8ab8e027bf45a460919563aa7a2d06adffc275da99b22dc07cf6a812de42b95f",
+      "size_bytes": 6627
+    },
+    {
+      "path": "Research/confidence_engine.py",
+      "sha256": "1eb993096f4115e7241cce00aa4aa39c757de385587467ee28d41ca8ff083b2e",
+      "size_bytes": 2981
+    },
+    {
+      "path": "Research/pareto_engine.py",
+      "sha256": "cae6ab0bc964159815443739325e507509c3e4deb4945094273bea207d3a93b9",
+      "size_bytes": 6734
+    },
+    {
+      "path": "Research/tier_gate.py",
+      "sha256": "73a925bf7c372ebc19bb85f99248d8256e860a549dffd3e0a8e4a4423c669afd",
+      "size_bytes": 3091
+    },
+    {
+      "path": "Research/promotion_engine.py",
+      "sha256": "bad131290c76b8247d8365ca54a535204925a4dca12ffee5eb7dda03ab25957d",
+      "size_bytes": 1676
+    },
+    {
+      "path": "Release/research_release_gate.py",
+      "sha256": "b84954579ef297a5c615c612148d657a04aef182772181dc147bb1a38043b8ba",
+      "size_bytes": 5719
+    },
+    {
+      "path": "Release/release_manifest_v7.py",
+      "sha256": "0d0eea31608d8af7021ec3ca68e19a7ca6227ce095a9e18d7f02c40ab0565ead",
+      "size_bytes": 1888
+    },
+    {
+      "path": "main_v7_final_rc.py",
+      "sha256": "32b746e54626f32d1bf730972fd7f92b4fb5c623a045624fcc2ccc108fc67d8d",
+      "size_bytes": 3382
+    }
+  ],
+  "product": "BursaAI",
+  "release": "Final RC",
+  "sprint": "7A.5",
+  "version": "7.0.0-final-rc"
+}

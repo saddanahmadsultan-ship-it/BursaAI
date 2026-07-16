@@ -1,0 +1,201 @@
+{
+  "candidate_hash": "b1861776994bd733c45688707834b4288db70c3af1a768b10b782cc176b0d6ac",
+  "candidate_id": "CAN-6CCC77B9A8F7",
+  "created_at": "2026-07-12T04:10:28.384219+00:00",
+  "diagnostics": {
+    "engine": "deterministic_mock",
+    "fold_count": 5,
+    "regime_returns": {
+      "BEAR": 2.84,
+      "BULL": 16.31,
+      "HIGH_VOL": 5.67,
+      "SIDEWAYS": 7.8
+    }
+  },
+  "equity_curve": [
+    {
+      "date": "2024-01-01",
+      "equity": 100630.83
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 101225.39
+    },
+    {
+      "date": "2024-03-01",
+      "equity": 101863.96
+    },
+    {
+      "date": "2024-03-31",
+      "equity": 102465.8
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 103112.19
+    },
+    {
+      "date": "2024-05-30",
+      "equity": 103803.9
+    },
+    {
+      "date": "2024-06-29",
+      "equity": 104500.25
+    },
+    {
+      "date": "2024-07-29",
+      "equity": 105117.68
+    },
+    {
+      "date": "2024-08-28",
+      "equity": 105780.79
+    },
+    {
+      "date": "2024-09-27",
+      "equity": 106490.41
+    },
+    {
+      "date": "2024-10-27",
+      "equity": 107119.59
+    },
+    {
+      "date": "2024-11-26",
+      "equity": 107709.64
+    },
+    {
+      "date": "2024-12-26",
+      "equity": 108389.11
+    },
+    {
+      "date": "2025-01-25",
+      "equity": 109116.22
+    },
+    {
+      "date": "2025-02-24",
+      "equity": 109760.91
+    },
+    {
+      "date": "2025-03-26",
+      "equity": 110365.51
+    },
+    {
+      "date": "2025-04-25",
+      "equity": 111061.73
+    },
+    {
+      "date": "2025-05-25",
+      "equity": 111717.92
+    },
+    {
+      "date": "2025-06-24",
+      "equity": 112422.68
+    },
+    {
+      "date": "2025-07-24",
+      "equity": 113086.91
+    },
+    {
+      "date": "2025-08-23",
+      "equity": 113800.3
+    },
+    {
+      "date": "2025-09-22",
+      "equity": 114563.71
+    },
+    {
+      "date": "2025-10-22",
+      "equity": 115332.24
+    },
+    {
+      "date": "2025-11-21",
+      "equity": 116013.66
+    }
+  ],
+  "error_message": null,
+  "execution_seconds": 0.0001330999657511711,
+  "experiment_id": "EXP-B2DC4B15CFF9",
+  "metrics": {
+    "average_holding_days": 0.0,
+    "average_loss": 0.0,
+    "average_win": 0.0,
+    "cagr": 14.18,
+    "calmar_ratio": 0.0,
+    "consistency_score": 88.0,
+    "expectancy": 0.0,
+    "exposure": 63.0,
+    "final_score": 70.3185,
+    "largest_loss": 0.0,
+    "largest_win": 0.0,
+    "losing_trades": 0,
+    "max_drawdown": 6.5600000000000005,
+    "payoff_ratio": 0.0,
+    "profit_factor": 1.1,
+    "recovery_factor": 2.161585365853658,
+    "risk_score": 83.0,
+    "robustness_score": 83.0,
+    "sharpe_ratio": 0.84,
+    "sortino_ratio": 1.05,
+    "stability_score": 0,
+    "total_return": 0.0,
+    "total_trades": 58,
+    "volatility": 15.0,
+    "win_rate": 63.93,
+    "winning_trades": 0
+  },
+  "monthly_returns": {
+    "2024-01": 1.18,
+    "2024-02": 1.36,
+    "2024-03": 1.18,
+    "2024-04": 1.36,
+    "2024-05": 1.54,
+    "2024-06": 1.54,
+    "2024-07": 1.18,
+    "2024-08": 1.36,
+    "2024-09": 1.54,
+    "2024-10": 1.18,
+    "2024-11": 1.0,
+    "2024-12": 1.36
+  },
+  "result_id": "RES-F1315462968C",
+  "trade_summary": {
+    "average_holding_days": 12,
+    "largest_loss": -4.2,
+    "largest_win": 9.4
+  },
+  "walk_forward_folds": [
+    {
+      "fold": 1,
+      "test_return": 8.15,
+      "test_sharpe": 0.66,
+      "train_return": 11.77
+    },
+    {
+      "fold": 2,
+      "test_return": 8.51,
+      "test_sharpe": 0.7,
+      "train_return": 12.19
+    },
+    {
+      "fold": 3,
+      "test_return": 8.86,
+      "test_sharpe": 0.73,
+      "train_return": 12.62
+    },
+    {
+      "fold": 4,
+      "test_return": 9.22,
+      "test_sharpe": 0.76,
+      "train_return": 13.05
+    },
+    {
+      "fold": 5,
+      "test_return": 9.57,
+      "test_sharpe": 0.8,
+      "train_return": 13.47
+    }
+  ],
+  "yearly_returns": {
+    "2023": 10.63,
+    "2024": 12.76,
+    "2025": 14.89
+  }
+}

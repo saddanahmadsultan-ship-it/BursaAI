@@ -1,0 +1,57 @@
+{
+  "experiments": {
+    "EXP-3E15AB9A59E6": {
+      "checkpoint_file": "checkpoints/EXP-3E15AB9A59E6.checkpoint.json",
+      "completed_at": "2026-07-16T21:04:08.413394+00:00",
+      "completed_candidates": 20,
+      "created_at": "2026-07-16T21:04:07.674734+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "failed_candidates": 0,
+      "mode": "PARALLEL",
+      "name": "Sprint 7B.2 Dataset Builder Demo",
+      "progress_percentage": 100.0,
+      "record_file": "records/EXP-3E15AB9A59E6.json",
+      "search_method": "GRID",
+      "started_at": "2026-07-16T21:04:07.702973+00:00",
+      "status": "COMPLETED",
+      "total_candidates": 20,
+      "updated_at": "2026-07-16T21:04:08.413409+00:00"
+    },
+    "EXP-B2DC4B15CFF9": {
+      "checkpoint_file": "checkpoints/EXP-B2DC4B15CFF9.checkpoint.json",
+      "completed_at": "2026-07-12T04:10:28.593045+00:00",
+      "completed_candidates": 12,
+      "created_at": "2026-07-12T04:10:28.271566+00:00",
+      "experiment_id": "EXP-B2DC4B15CFF9",
+      "failed_candidates": 0,
+      "mode": "PARALLEL",
+      "name": "Sprint 7A.5 RC4 Pareto Demo",
+      "progress_percentage": 100.0,
+      "record_file": "records/EXP-B2DC4B15CFF9.json",
+      "search_method": "GRID",
+      "started_at": "2026-07-12T04:10:28.287499+00:00",
+      "status": "COMPLETED",
+      "total_candidates": 12,
+      "updated_at": "2026-07-12T04:10:28.593053+00:00"
+    },
+    "EXP-EECBAB663BFC": {
+      "checkpoint_file": "checkpoints/EXP-EECBAB663BFC.checkpoint.json",
+      "completed_at": "2026-07-14T20:58:33.331802+00:00",
+      "completed_candidates": 12,
+      "created_at": "2026-07-14T20:58:32.941573+00:00",
+      "experiment_id": "EXP-EECBAB663BFC",
+      "failed_candidates": 0,
+      "mode": "PARALLEL",
+      "name": "Sprint 7A.5 Final RC Validation",
+      "progress_percentage": 100.0,
+      "record_file": "records/EXP-EECBAB663BFC.json",
+      "search_method": "GRID",
+      "started_at": "2026-07-14T20:58:32.959478+00:00",
+      "status": "COMPLETED",
+      "total_candidates": 12,
+      "updated_at": "2026-07-14T20:58:33.331811+00:00"
+    }
+  },
+  "schema_version": 1,
+  "updated_at": "2026-07-16T21:04:08.428901+00:00"
+}

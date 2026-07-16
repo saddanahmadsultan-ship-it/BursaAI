@@ -1,13 +1,14 @@
-BursaAI v7 Sprint 7A.5 Final RC Release Pack
+BursaAI v7 Sprint 7B.2 Release Pack
+Research Dataset Builder + Feature Engineering
 
 INSTALL
 
-1. Pastikan RC4 sudah merge ke develop.
+1. Pastikan Sprint 7B.1 sudah merge ke develop.
 2. Jalankan:
 
    git switch develop
-   git pull
-   git switch -c release/7a5-final-rc
+   git pull origin develop
+   git switch -c feature/7b2-research-dataset
 
 3. Extract ZIP.
 4. Copy semua kandungan ke root BursaAI.
@@ -15,22 +16,34 @@ INSTALL
 
 VALIDATION
 
-python Tests\run_sprint7a5_full_regression.py
-python main_v7_final_rc.py
+python -m unittest Tests.test_sprint7b2 -v
+python main_v7_dataset_builder.py
 python Tools\repository_cleanup_audit.py
 python Tools\pre_commit_security_check.py
 
 EXPECTED
 
-SPRINT 7A.5 FULL REGRESSION PASSED
-SPRINT 7A.5 FINAL RC — RELEASE GATE PASSED
+Ran 8 tests
+OK
+
+SPRINT 7B.2 COMPLETED
 
 GIT
 
 git add .
-git commit -m "release(research): prepare Sprint 7A.5 Final RC"
-git push -u origin release/7a5-final-rc
+git commit -m "feat(ml): add Sprint 7B.2 research dataset and feature engineering"
+git push -u origin feature/7b2-research-dataset
 
-Then open Pull Request:
+Open Pull Request:
 
-release/7a5-final-rc -> develop
+base: develop
+compare: feature/7b2-research-dataset
+
+GENERATED OUTPUT
+
+Datasets/Research/
+  research_ml_dataset.csv
+  research_ml_dataset.json
+  research_ml_summary.json
+
+The Datasets folder is ignored by Git because it contains generated ML artifacts.

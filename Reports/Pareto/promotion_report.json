@@ -1,0 +1,170 @@
+[
+  {
+    "action": "ADVANCE_TO_STRESS_TEST",
+    "approved_tier": "RESEARCH_SILVER",
+    "candidate_id": "CAN-FE6D35640A19",
+    "candidate_name": "EMA_RSI_ATR_00002",
+    "confidence_score": 85.9024,
+    "overall_score": 80.5989,
+    "pareto_front": 1,
+    "passed": true,
+    "rank": 1,
+    "reasons": [
+      "All Silver gates passed."
+    ]
+  },
+  {
+    "action": "ADVANCE_TO_STRESS_TEST",
+    "approved_tier": "RESEARCH_SILVER",
+    "candidate_id": "CAN-9A178C11171D",
+    "candidate_name": "EMA_RSI_ATR_00008",
+    "confidence_score": 85.7607,
+    "overall_score": 80.4008,
+    "pareto_front": 1,
+    "passed": true,
+    "rank": 2,
+    "reasons": [
+      "All Silver gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-F950D44729A6",
+    "candidate_name": "EMA_RSI_ATR_00011",
+    "confidence_score": 85.3222,
+    "overall_score": 77.4974,
+    "pareto_front": 1,
+    "passed": true,
+    "rank": 3,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-48F1E986DA82",
+    "candidate_name": "EMA_RSI_ATR_00010",
+    "confidence_score": 75.6827,
+    "overall_score": 74.8798,
+    "pareto_front": 1,
+    "passed": true,
+    "rank": 6,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-D68A7B8E644D",
+    "candidate_name": "EMA_RSI_ATR_00001",
+    "confidence_score": 86.5897,
+    "overall_score": 73.2846,
+    "pareto_front": 1,
+    "passed": true,
+    "rank": 7,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-CC594A9D71D4",
+    "candidate_name": "EMA_RSI_ATR_00012",
+    "confidence_score": 85.9622,
+    "overall_score": 72.549,
+    "pareto_front": 1,
+    "passed": true,
+    "rank": 8,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-6A63BF9D9EEF",
+    "candidate_name": "EMA_RSI_ATR_00005",
+    "confidence_score": 87.6232,
+    "overall_score": 70.0152,
+    "pareto_front": 1,
+    "passed": true,
+    "rank": 11,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-C224C994D400",
+    "candidate_name": "EMA_RSI_ATR_00009",
+    "confidence_score": 81.2417,
+    "overall_score": 77.1613,
+    "pareto_front": 2,
+    "passed": true,
+    "rank": 4,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-7104CB15069E",
+    "candidate_name": "EMA_RSI_ATR_00004",
+    "confidence_score": 76.8148,
+    "overall_score": 75.4009,
+    "pareto_front": 2,
+    "passed": true,
+    "rank": 5,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-ACEB60B41227",
+    "candidate_name": "EMA_RSI_ATR_00006",
+    "confidence_score": 83.5638,
+    "overall_score": 70.6894,
+    "pareto_front": 2,
+    "passed": true,
+    "rank": 9,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-E0B9BA4935C6",
+    "candidate_name": "EMA_RSI_ATR_00003",
+    "confidence_score": 78.8966,
+    "overall_score": 70.6829,
+    "pareto_front": 2,
+    "passed": true,
+    "rank": 10,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  },
+  {
+    "action": "KEEP_FOR_FURTHER_RESEARCH",
+    "approved_tier": "CANDIDATE",
+    "candidate_id": "CAN-985327594C29",
+    "candidate_name": "EMA_RSI_ATR_00007",
+    "confidence_score": 77.4236,
+    "overall_score": 69.2891,
+    "pareto_front": 2,
+    "passed": true,
+    "rank": 12,
+    "reasons": [
+      "Candidate gates passed."
+    ]
+  }
+]

@@ -1,0 +1,201 @@
+{
+  "candidate_hash": "10a89fe638574e909760a40cbc350a947212c493dd2ff0a2a6f174327e856397",
+  "candidate_id": "CAN-4D39F33E00B7",
+  "created_at": "2026-07-12T04:10:28.325883+00:00",
+  "diagnostics": {
+    "engine": "deterministic_mock",
+    "fold_count": 5,
+    "regime_returns": {
+      "BEAR": 2.31,
+      "BULL": 13.26,
+      "HIGH_VOL": 4.61,
+      "SIDEWAYS": 6.34
+    }
+  },
+  "equity_curve": [
+    {
+      "date": "2024-01-01",
+      "equity": 100480.42
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 100922.95
+    },
+    {
+      "date": "2024-03-01",
+      "equity": 101448.17
+    },
+    {
+      "date": "2024-03-31",
+      "equity": 101935.54
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 102466.03
+    },
+    {
+      "date": "2024-05-30",
+      "equity": 102958.3
+    },
+    {
+      "date": "2024-06-29",
+      "equity": 103411.74
+    },
+    {
+      "date": "2024-07-29",
+      "equity": 103867.18
+    },
+    {
+      "date": "2024-08-28",
+      "equity": 104324.63
+    },
+    {
+      "date": "2024-09-27",
+      "equity": 104784.1
+    },
+    {
+      "date": "2024-10-27",
+      "equity": 105245.58
+    },
+    {
+      "date": "2024-11-26",
+      "equity": 105793.3
+    },
+    {
+      "date": "2024-12-26",
+      "equity": 106301.55
+    },
+    {
+      "date": "2025-01-25",
+      "equity": 106854.76
+    },
+    {
+      "date": "2025-02-24",
+      "equity": 107368.11
+    },
+    {
+      "date": "2025-03-26",
+      "equity": 107926.87
+    },
+    {
+      "date": "2025-04-25",
+      "equity": 108445.37
+    },
+    {
+      "date": "2025-05-25",
+      "equity": 108922.98
+    },
+    {
+      "date": "2025-06-24",
+      "equity": 109489.83
+    },
+    {
+      "date": "2025-07-24",
+      "equity": 110015.84
+    },
+    {
+      "date": "2025-08-23",
+      "equity": 110588.38
+    },
+    {
+      "date": "2025-09-22",
+      "equity": 111119.66
+    },
+    {
+      "date": "2025-10-22",
+      "equity": 111609.05
+    },
+    {
+      "date": "2025-11-21",
+      "equity": 112100.6
+    }
+  ],
+  "error_message": null,
+  "execution_seconds": 0.00012859981507062912,
+  "experiment_id": "EXP-B2DC4B15CFF9",
+  "metrics": {
+    "average_holding_days": 0.0,
+    "average_loss": 0.0,
+    "average_win": 0.0,
+    "cagr": 11.53,
+    "calmar_ratio": 0.0,
+    "consistency_score": 73.0,
+    "expectancy": 0.0,
+    "exposure": 48.0,
+    "final_score": 69.9435,
+    "largest_loss": 0.0,
+    "largest_win": 0.0,
+    "losing_trades": 0,
+    "max_drawdown": 14.32,
+    "payoff_ratio": 0.0,
+    "profit_factor": 1.99,
+    "recovery_factor": 0.8051675977653631,
+    "risk_score": 68.0,
+    "robustness_score": 68.0,
+    "sharpe_ratio": 1.33,
+    "sortino_ratio": 1.6625,
+    "stability_score": 0,
+    "total_return": 0.0,
+    "total_trades": 73,
+    "volatility": 15.0,
+    "win_rate": 54.19,
+    "winning_trades": 0
+  },
+  "monthly_returns": {
+    "2024-01": 0.78,
+    "2024-02": 1.14,
+    "2024-03": 0.96,
+    "2024-04": 1.14,
+    "2024-05": 0.96,
+    "2024-06": 0.78,
+    "2024-07": 0.78,
+    "2024-08": 0.78,
+    "2024-09": 0.78,
+    "2024-10": 0.78,
+    "2024-11": 1.14,
+    "2024-12": 0.96
+  },
+  "result_id": "RES-BAEE229B2A7B",
+  "trade_summary": {
+    "average_holding_days": 12,
+    "largest_loss": -4.2,
+    "largest_win": 9.4
+  },
+  "walk_forward_folds": [
+    {
+      "fold": 1,
+      "test_return": 6.63,
+      "test_sharpe": 1.05,
+      "train_return": 9.57
+    },
+    {
+      "fold": 2,
+      "test_return": 6.92,
+      "test_sharpe": 1.1,
+      "train_return": 9.92
+    },
+    {
+      "fold": 3,
+      "test_return": 7.21,
+      "test_sharpe": 1.16,
+      "train_return": 10.26
+    },
+    {
+      "fold": 4,
+      "test_return": 7.49,
+      "test_sharpe": 1.21,
+      "train_return": 10.61
+    },
+    {
+      "fold": 5,
+      "test_return": 7.78,
+      "test_sharpe": 1.26,
+      "train_return": 10.95
+    }
+  ],
+  "yearly_returns": {
+    "2023": 8.65,
+    "2024": 10.38,
+    "2025": 12.11
+  }
+}

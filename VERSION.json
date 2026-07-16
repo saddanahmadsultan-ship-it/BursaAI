@@ -1,8 +1,7 @@
 {
   "product": "BursaAI",
-  "version": "7.0.0-final-rc",
-  "sprint": "7A.5",
-  "release": "Final RC",
-  "component": "Unified AI Research Pipeline",
-  "recommended_branch": "release/7a5-final-rc"
+  "version": "7.2.0-rc1",
+  "sprint": "7B.2",
+  "release": "Research Dataset Builder + Feature Engineering",
+  "recommended_branch": "feature/7b2-research-dataset"
 }

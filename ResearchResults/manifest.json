@@ -33,6 +33,28 @@
       "result_id": "RES-03A4D86455E2",
       "successful": true
     },
+    "RES-0971FB039F10": {
+      "candidate_hash": "37251197fa7fcad741d3041c38a1187df23554d013ee6f70a8f0fe1feb370df7",
+      "candidate_id": "CAN-220F2A1F2B38",
+      "checksum": "f2dcd35c4866b57c7db244f188b3fc559cb8fa7de706df60b6b9d3debdcc67c3",
+      "created_at": "2026-07-16T21:04:07.876986+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-0971FB039F10.json",
+      "final_score": 90.16,
+      "result_id": "RES-0971FB039F10",
+      "successful": true
+    },
+    "RES-0D9C798CF74B": {
+      "candidate_hash": "59b0b54563f502489764c8cb26e8207bf231057e1c665f855ae812d6cb921374",
+      "candidate_id": "CAN-9FD806088E7B",
+      "checksum": "7781583b2e58005a853fa34763d78580752e088e05337e7b531764e50116715b",
+      "created_at": "2026-07-16T21:04:08.154967+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-0D9C798CF74B.json",
+      "final_score": 86.637,
+      "result_id": "RES-0D9C798CF74B",
+      "successful": true
+    },
     "RES-0FF12C8A2D54": {
       "candidate_hash": "59633d51eac67f23998f3c43d3021e698f3b3e32cf56fdf05cfa89d93d510470",
       "candidate_id": "CAN-8986EA576103",
@@ -55,6 +77,28 @@
       "result_id": "RES-151731168F79",
       "successful": true
     },
+    "RES-19A49E5B5C2A": {
+      "candidate_hash": "af91557a59311c04b148b9dfa43da556bbef4d15742d445de9df83ad77272d1a",
+      "candidate_id": "CAN-72DAF436B10C",
+      "checksum": "f4bbf5c5a561a705d5dbdf9c7adf8600303f43a2ec954885f6ecf15024ca0b95",
+      "created_at": "2026-07-16T21:04:07.775308+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-19A49E5B5C2A.json",
+      "final_score": 72.351,
+      "result_id": "RES-19A49E5B5C2A",
+      "successful": true
+    },
+    "RES-1B936CCCB796": {
+      "candidate_hash": "fec7d7f0df158a739f8ca38065f8a0d63a8dcd165b4111e2c71a65d6b4d6cb34",
+      "candidate_id": "CAN-D48E2F23FD65",
+      "checksum": "c0a7027696adcbeb4fb80e6ecb8b9d149f2c898d09913cc79623b2003d2c1a01",
+      "created_at": "2026-07-16T21:04:08.182263+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-1B936CCCB796.json",
+      "final_score": 82.85849999999999,
+      "result_id": "RES-1B936CCCB796",
+      "successful": true
+    },
     "RES-2AE791724408": {
       "candidate_hash": "5b93802a99eef93fbd1c8630272ef09a00742219f4e16b5365c078bbd06e5043",
       "candidate_id": "CAN-C224C994D400",
@@ -64,6 +108,39 @@
       "file": "results/RES-2AE791724408.json",
       "final_score": 87.08999999999997,
       "result_id": "RES-2AE791724408",
+      "successful": true
+    },
+    "RES-2D0091094868": {
+      "candidate_hash": "10a89fe638574e909760a40cbc350a947212c493dd2ff0a2a6f174327e856397",
+      "candidate_id": "CAN-234D516C8E4D",
+      "checksum": "43dea571b17b171c23f395912c7d457d25e8a2b8d72843b8753a85771641d1ce",
+      "created_at": "2026-07-16T21:04:07.776591+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-2D0091094868.json",
+      "final_score": 69.9435,
+      "result_id": "RES-2D0091094868",
+      "successful": true
+    },
+    "RES-2ECA63996EB9": {
+      "candidate_hash": "cc998a9c2dbfd20ac8f759183eae7c72a1cc2168bd3834cb98ad99af3216a15b",
+      "candidate_id": "CAN-1E08C24FC1C9",
+      "checksum": "03d50bf6a06725813ea0ef6d7b962219fc0f3afafab63f028938f21fb3a2d877",
+      "created_at": "2026-07-16T21:04:08.088759+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-2ECA63996EB9.json",
+      "final_score": 84.44300000000001,
+      "result_id": "RES-2ECA63996EB9",
+      "successful": true
+    },
+    "RES-344CF9E7DE3B": {
+      "candidate_hash": "b1861776994bd733c45688707834b4288db70c3af1a768b10b782cc176b0d6ac",
+      "candidate_id": "CAN-AE6EA0EB7C30",
+      "checksum": "b658499a2cc3e70f092a2bcd798c8f6ff31508462e3a05603b188af5d4fa7b88",
+      "created_at": "2026-07-16T21:04:07.845101+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-344CF9E7DE3B.json",
+      "final_score": 70.3185,
+      "result_id": "RES-344CF9E7DE3B",
       "successful": true
     },
     "RES-363D5F98EE27": {
@@ -77,6 +154,17 @@
       "result_id": "RES-363D5F98EE27",
       "successful": true
     },
+    "RES-3FA5A07EC9C7": {
+      "candidate_hash": "59633d51eac67f23998f3c43d3021e698f3b3e32cf56fdf05cfa89d93d510470",
+      "candidate_id": "CAN-C7C21EEB57EC",
+      "checksum": "bf1a294ef1080d8eea960a1c0b1b27893a444a5d08dd13e64b98070a5046ba13",
+      "created_at": "2026-07-16T21:04:07.937189+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-3FA5A07EC9C7.json",
+      "final_score": 82.064,
+      "result_id": "RES-3FA5A07EC9C7",
+      "successful": true
+    },
     "RES-43D4713FE54B": {
       "candidate_hash": "db1baae786fc8532bc71f88df362c51094522e147bc9fb5f237e6860634c1afb",
       "candidate_id": "CAN-ACEB60B41227",
@@ -88,6 +176,39 @@
       "result_id": "RES-43D4713FE54B",
       "successful": true
     },
+    "RES-5200FE437D96": {
+      "candidate_hash": "c7ffd63b818ae431ab1e84062dddc65ca5a6c3701e5dfe87a9bba23a0846567f",
+      "candidate_id": "CAN-11FBA0A42F96",
+      "checksum": "a87babc031b117a97db83aadb6a2e6eda0448ec36317db0f2b12280b6f227542",
+      "created_at": "2026-07-16T21:04:07.966912+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-5200FE437D96.json",
+      "final_score": 84.6125,
+      "result_id": "RES-5200FE437D96",
+      "successful": true
+    },
+    "RES-57724F6CBBB6": {
+      "candidate_hash": "4ae65770fcc688d79c55ae5a993ed15bd9878bc863689f2291fd5198e16839cb",
+      "candidate_id": "CAN-BA55CA782FFF",
+      "checksum": "e635cfef174d57dcb1852a153f74f93bf224058a0ce1db23dbbff81bd7766aa4",
+      "created_at": "2026-07-16T21:04:08.222165+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-57724F6CBBB6.json",
+      "final_score": 75.375,
+      "result_id": "RES-57724F6CBBB6",
+      "successful": true
+    },
+    "RES-5C04FB7727FC": {
+      "candidate_hash": "db1baae786fc8532bc71f88df362c51094522e147bc9fb5f237e6860634c1afb",
+      "candidate_id": "CAN-DFB9F72DCF8D",
+      "checksum": "d06f80e6bf4d019ba113864229c5e7fd773362bc507825a92fd285531b9569ae",
+      "created_at": "2026-07-16T21:04:07.812782+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-5C04FB7727FC.json",
+      "final_score": 77.2505,
+      "result_id": "RES-5C04FB7727FC",
+      "successful": true
+    },
     "RES-67CAA6770F23": {
       "candidate_hash": "37251197fa7fcad741d3041c38a1187df23554d013ee6f70a8f0fe1feb370df7",
       "candidate_id": "CAN-9A178C11171D",
@@ -97,6 +218,39 @@
       "file": "results/RES-67CAA6770F23.json",
       "final_score": 90.16,
       "result_id": "RES-67CAA6770F23",
+      "successful": true
+    },
+    "RES-6B37FE05402C": {
+      "candidate_hash": "5b93802a99eef93fbd1c8630272ef09a00742219f4e16b5365c078bbd06e5043",
+      "candidate_id": "CAN-6A1C0B1D36E9",
+      "checksum": "f235b921ec06f4d4fcf772e1dc79875db8c2fa6f78c69679d1e39e174f7cdc7e",
+      "created_at": "2026-07-16T21:04:07.908849+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-6B37FE05402C.json",
+      "final_score": 87.08999999999997,
+      "result_id": "RES-6B37FE05402C",
+      "successful": true
+    },
+    "RES-6B59620F793F": {
+      "candidate_hash": "5fb597880d850eb82af0239583928d44750fbdb4ee2aadecd2cf67f6bc71f24c",
+      "candidate_id": "CAN-6BFD4111C531",
+      "checksum": "fc57846a73af4efc9ee10cac87c7402b07ebe99d62e28bb8db8ec9c3b690eb07",
+      "created_at": "2026-07-16T21:04:08.026278+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-6B59620F793F.json",
+      "final_score": 81.44149999999999,
+      "result_id": "RES-6B59620F793F",
+      "successful": true
+    },
+    "RES-737CB3BD154E": {
+      "candidate_hash": "04549ece3ab8ce9c1d74fbf7efac6279f9fd7974439bd0ea9eb1a0b82c370a68",
+      "candidate_id": "CAN-4593E4026BFA",
+      "checksum": "7bf02c757ebe1e7a9e906aa8bdaf86dc0b728a9ba879d18062aca0e736fb77e0",
+      "created_at": "2026-07-16T21:04:07.784387+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-737CB3BD154E.json",
+      "final_score": 75.327,
+      "result_id": "RES-737CB3BD154E",
       "successful": true
     },
     "RES-78FD95B78A5F": {
@@ -143,6 +297,17 @@
       "result_id": "RES-99D54733786A",
       "successful": true
     },
+    "RES-99F3BF97F97E": {
+      "candidate_hash": "51d09ea05d8ecc05d46b98352eddf0fe26efe037e793dd10a84d570f675fe81f",
+      "candidate_id": "CAN-2B9F5B874C6D",
+      "checksum": "e468026b1c8ccb7bef98d0d27a187bbaca6f99fddf5900c67de2190b7de73afe",
+      "created_at": "2026-07-16T21:04:08.259909+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-99F3BF97F97E.json",
+      "final_score": 79.9765,
+      "result_id": "RES-99F3BF97F97E",
+      "successful": true
+    },
     "RES-A2CE11A31238": {
       "candidate_hash": "04549ece3ab8ce9c1d74fbf7efac6279f9fd7974439bd0ea9eb1a0b82c370a68",
       "candidate_id": "CAN-6A63BF9D9EEF",
@@ -152,6 +317,28 @@
       "file": "results/RES-A2CE11A31238.json",
       "final_score": 75.327,
       "result_id": "RES-A2CE11A31238",
+      "successful": true
+    },
+    "RES-A302E64D510C": {
+      "candidate_hash": "f112a7d387096080f2834b925d244c667fa43afacafa8f9b791ead66e7ff7f0c",
+      "candidate_id": "CAN-A348D4876221",
+      "checksum": "4f7d41db176f56bbb2477732efef49d16f3e3d81f9af21197870e4a03872a54f",
+      "created_at": "2026-07-16T21:04:08.053715+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-A302E64D510C.json",
+      "final_score": 71.765,
+      "result_id": "RES-A302E64D510C",
+      "successful": true
+    },
+    "RES-AF5373A42209": {
+      "candidate_hash": "d9f9f24b420076bfa2fb1d8106730f5c339dcf5dd1277adc396df176f84f12ce",
+      "candidate_id": "CAN-CA43D66DE165",
+      "checksum": "edb2d1c3c738d435720743aaf1aa4171e15357ca9de49043b2061f29735f5df5",
+      "created_at": "2026-07-16T21:04:07.996720+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-AF5373A42209.json",
+      "final_score": 71.4395,
+      "result_id": "RES-AF5373A42209",
       "successful": true
     },
     "RES-B3BE85349E44": {
@@ -220,6 +407,28 @@
       "result_id": "RES-CAFD98845991",
       "successful": true
     },
+    "RES-D764BF689D0F": {
+      "candidate_hash": "b1ad3852a4f0ebab023ed48b9d35e031e35eab2746b0ed545aebb3392f7e2fae",
+      "candidate_id": "CAN-764EFA243C53",
+      "checksum": "56d66a97329afcaa6babdd7f0bd56313f495c07f77c696526d5d5f0ce1a2f15a",
+      "created_at": "2026-07-16T21:04:08.122134+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-D764BF689D0F.json",
+      "final_score": 89.312,
+      "result_id": "RES-D764BF689D0F",
+      "successful": true
+    },
+    "RES-DE86ECF40A60": {
+      "candidate_hash": "80b202aca62d97bebb5c9c03aa00a4481952e202064abea9ea129c1f1f6646f6",
+      "candidate_id": "CAN-B50998E76FEC",
+      "checksum": "a3ca2cd8f59fa3166a3758740b3b5cb6a0c556857e19ee06e3cfbfe7da7e81ce",
+      "created_at": "2026-07-16T21:04:07.776991+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-DE86ECF40A60.json",
+      "final_score": 77.287,
+      "result_id": "RES-DE86ECF40A60",
+      "successful": true
+    },
     "RES-E285AAB945F4": {
       "candidate_hash": "10a89fe638574e909760a40cbc350a947212c493dd2ff0a2a6f174327e856397",
       "candidate_id": "CAN-E0B9BA4935C6",
@@ -229,6 +438,17 @@
       "file": "results/RES-E285AAB945F4.json",
       "final_score": 69.9435,
       "result_id": "RES-E285AAB945F4",
+      "successful": true
+    },
+    "RES-E969D9E4D485": {
+      "candidate_hash": "8b07588ad7cdf469a884cf20c3eb0cc693153de28a6f60532b33add341866184",
+      "candidate_id": "CAN-6258106B2641",
+      "checksum": "ff66fc01e89737b5b6b2c7601c1cbb63bfac2bf723f3d5571c6784acb4ff8189",
+      "created_at": "2026-07-16T21:04:07.776058+00:00",
+      "experiment_id": "EXP-3E15AB9A59E6",
+      "file": "results/RES-E969D9E4D485.json",
+      "final_score": 92.2195,
+      "result_id": "RES-E969D9E4D485",
       "successful": true
     },
     "RES-ED943B0496AA": {
@@ -266,5 +486,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-07-14T20:58:33.300120+00:00"
+  "updated_at": "2026-07-16T21:04:08.370035+00:00"
 }

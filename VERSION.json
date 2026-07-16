@@ -1,7 +1,7 @@
 {
   "product": "BursaAI",
-  "version": "7.1.0-rc1",
-  "sprint": "7B.1",
-  "release": "Machine Learning Foundations",
-  "recommended_branch": "feature/7b1-ml-foundations"
+  "version": "7.2.0-rc1",
+  "sprint": "7B.2",
+  "release": "Research Dataset Builder + Feature Engineering",
+  "recommended_branch": "feature/7b2-research-dataset"
 }

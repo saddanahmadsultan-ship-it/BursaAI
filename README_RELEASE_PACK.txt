@@ -1,47 +1,36 @@
-BursaAI v7 Sprint 7A.5 RC1 Release Pack
-AI Ranking Core + Weighted Scoring + Leaderboard
+BursaAI v7 Sprint 7A.5 Final RC Release Pack
 
-INSTALLATION
+INSTALL
 
-1. Backup folder BursaAI.
-2. Extract ZIP.
-3. Copy semua kandungan ke root BursaAI.
-4. Pilih Replace/Merge.
-5. Jalankan dari root BursaAI:
+1. Pastikan RC4 sudah merge ke develop.
+2. Jalankan:
 
-   python -m unittest Tests.test_sprint7a5_rc1 -v
-   python main_v7_ranking.py
+   git switch develop
+   git pull
+   git switch -c release/7a5-final-rc
 
-Tiada edit sys.path.
-Tiada PowerShell script diperlukan.
-Tiada susunan fail manual.
+3. Extract ZIP.
+4. Copy semua kandungan ke root BursaAI.
+5. Pilih Replace/Merge.
 
-OUTPUT
+VALIDATION
 
-Reports/Ranking/
-  leaderboard.csv
-  leaderboard.json
-  summary.json
+python Tests\run_sprint7a5_full_regression.py
+python main_v7_final_rc.py
+python Tools\repository_cleanup_audit.py
+python Tools\pre_commit_security_check.py
 
-RC1 FEATURES
+EXPECTED
 
-- Multi-factor weighted scoring
-- Configurable normalized weights
-- Performance score
-- Risk score
-- Consistency score
-- Robustness score
-- Confidence score
-- Overall AI score
-- Tier classification
-- Recommendation mapping
-- Deterministic ranking
-- CSV/JSON export
-- Release launcher
-- Unit tests
+SPRINT 7A.5 FULL REGRESSION PASSED
+SPRINT 7A.5 FINAL RC — RELEASE GATE PASSED
 
-RC1 LIMITATION
+GIT
 
-Robustness dan consistency menggunakan metrik yang telah tersedia.
-Formula lanjutan berdasarkan fold, monthly return, regime dan parameter stability
-akan dibina dalam RC2 dan RC3.
+git add .
+git commit -m "release(research): prepare Sprint 7A.5 Final RC"
+git push -u origin release/7a5-final-rc
+
+Then open Pull Request:
+
+release/7a5-final-rc -> develop

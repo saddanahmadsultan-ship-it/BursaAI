@@ -17,6 +17,23 @@
       "total_candidates": 20,
       "updated_at": "2026-07-16T21:04:08.413409+00:00"
     },
+    "EXP-536B6F743B15": {
+      "checkpoint_file": "checkpoints/EXP-536B6F743B15.checkpoint.json",
+      "completed_at": "2026-07-17T02:24:29.330329+00:00",
+      "completed_candidates": 20,
+      "created_at": "2026-07-17T02:24:28.688053+00:00",
+      "experiment_id": "EXP-536B6F743B15",
+      "failed_candidates": 0,
+      "mode": "PARALLEL",
+      "name": "Sprint 7B.2 Dataset Builder Demo",
+      "progress_percentage": 100.0,
+      "record_file": "records/EXP-536B6F743B15.json",
+      "search_method": "GRID",
+      "started_at": "2026-07-17T02:24:28.700367+00:00",
+      "status": "COMPLETED",
+      "total_candidates": 20,
+      "updated_at": "2026-07-17T02:24:29.330339+00:00"
+    },
     "EXP-B2DC4B15CFF9": {
       "checkpoint_file": "checkpoints/EXP-B2DC4B15CFF9.checkpoint.json",
       "completed_at": "2026-07-12T04:10:28.593045+00:00",
@@ -53,5 +70,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-07-16T21:04:08.428901+00:00"
+  "updated_at": "2026-07-17T02:24:29.343434+00:00"
 }

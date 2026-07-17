@@ -1,49 +1,24 @@
-BursaAI v7 Sprint 7B.2 Release Pack
-Research Dataset Builder + Feature Engineering
+BursaAI v7 Sprint 7B.4 Release Pack
+ML Prediction Service + Research Promotion Integration
 
 INSTALL
-
-1. Pastikan Sprint 7B.1 sudah merge ke develop.
-2. Jalankan:
-
-   git switch develop
+1. Merge Sprint 7B.3 into develop.
+2. git switch develop
    git pull origin develop
-   git switch -c feature/7b2-research-dataset
-
-3. Extract ZIP.
-4. Copy semua kandungan ke root BursaAI.
-5. Pilih Replace/Merge.
-
-VALIDATION
-
-python -m unittest Tests.test_sprint7b2 -v
-python main_v7_dataset_builder.py
-python Tools\repository_cleanup_audit.py
-python Tools\pre_commit_security_check.py
+   git switch -c feature/7b4-prediction-service
+3. Extract this ZIP and copy all contents into the BursaAI root.
+4. python -m pip install -r requirements.txt
+5. python -m unittest Tests.test_sprint7b4 -v
+6. python main_v7_prediction_service.py
 
 EXPECTED
-
 Ran 8 tests
 OK
-
-SPRINT 7B.2 COMPLETED
+SPRINT 7B.4 COMPLETED
 
 GIT
-
 git add .
-git commit -m "feat(ml): add Sprint 7B.2 research dataset and feature engineering"
-git push -u origin feature/7b2-research-dataset
+git commit -m "feat(ml): add Sprint 7B.4 prediction service and promotion integration"
+git push -u origin feature/7b4-prediction-service
 
-Open Pull Request:
-
-base: develop
-compare: feature/7b2-research-dataset
-
-GENERATED OUTPUT
-
-Datasets/Research/
-  research_ml_dataset.csv
-  research_ml_dataset.json
-  research_ml_summary.json
-
-The Datasets folder is ignored by Git because it contains generated ML artifacts.
+Generated Models, Datasets, Reports, Experiments and ResearchResults remain ignored by Git.
